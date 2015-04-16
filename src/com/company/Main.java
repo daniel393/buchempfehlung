@@ -1,15 +1,8 @@
 package com.company;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class Main {
 
@@ -17,7 +10,7 @@ public class Main {
 	// write your code here
         List<String> list = new ArrayList<String>();
 
-        Analyzer anal = new Analyzer("E011.csv");
+        Parser anal = new Parser("E011.csv");
 
 
         //Alter

@@ -9,11 +9,11 @@ import java.util.stream.Stream;
 /**
  * Created by Eike on 16.04.2015.
  */
-public class Analyzer {
+public class Parser {
 
     private ArrayList<String[]> sList = new ArrayList<String[]>();
 
-    public Analyzer(String filename) throws IOException {
+    public Parser(String filename) throws IOException {
         Stream<String> lines = Files.lines(Paths.get(filename));
         lines.forEach(s -> sList.add(s.split(";")));
     }
