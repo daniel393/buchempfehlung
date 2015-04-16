@@ -55,6 +55,9 @@ public class DataStruct {
         }
     }
 
+    public String getName() {
+        return name;
+    }
+
 
 }
-  
