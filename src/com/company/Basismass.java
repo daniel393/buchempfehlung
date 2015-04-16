@@ -11,22 +11,33 @@ public class Basismass {
 
     private DataStruct dataStruct;
     private String merkmal;
-    //Menge , Basismaß
-    private HashMap<ArrayList<String>,Float> values;
+    //              Name            Elemente/Menge   Basismaß
+    //              <18             E,D              0,5
+    private HashMap<String,HashMap<ArrayList<String>,Float>> values;
+
+    public Basismass(String sMerkmal, HashMap<String,HashMap<ArrayList<String>,Float>> sValues){
+        this.merkmal=sMerkmal;
+        this.values=sValues;
+        this.dataStruct=null;
+    }
 
     public Basismass(DataStruct data){
         this.dataStruct= data;
         this.merkmal=data.getName();
-        this.values= new HashMap<ArrayList<String>,Float>();
+        this.values= new HashMap<String,HashMap<ArrayList<String>,Float>>();
         this.calculate();
     }
 
     private void calculate(){
-        ArrayList<String> list= new ArrayList<String>();
-        list.add("A");
-        list.add("C");
-        list.add("B");
-        this.values.put(list, (float) 0.65);
 
+    }
+
+
+    public String getMerkmal() {
+        return merkmal;
+    }
+
+    public HashMap<String,HashMap<ArrayList<String>,Float>> getValues() {
+        return values;
     }
 }

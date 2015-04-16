@@ -8,8 +8,6 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 	// write your code here
-        List<String> list = new ArrayList<String>();
-
         Parser anal = new Parser("E011.csv");
 
 
