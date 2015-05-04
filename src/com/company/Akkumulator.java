@@ -22,7 +22,7 @@ public class Akkumulator {
             }
         }
 
-        return new Basismass(m1.getKategorie()+ " & " +m2.getKategorie(),values);
+        return new Basismass(listFusion(m1.getKategorie(),m2.getKategorie()),values);
     }
 
     private ArrayList<String> schnittmenge(ArrayList<String> l1, ArrayList<String> l2){
