@@ -7,31 +7,29 @@ import java.util.ArrayList;
  */
 public class Basismass {
 
-    private String name;
-    //              Name            Elemente/Menge   Basismaß
+    private String kategorie;
+    //              Eigenschaft            Elemente/Menge   Basismaß
     //              <18             E,D              0,5
-    private ArrayList<String[]> values;
+    private ArrayList<BasismassEigenschaften> values;
 
-    public Basismass(ArrayList<String[]> sValues){
+    public Basismass(String name,ArrayList<BasismassEigenschaften> sValues){
         this.values=sValues;
     }
 
-    public Basismass(String sName, ArrayList<DataOverview> overview){
-        this.name =sName;
-        this.values= new ArrayList<String[]>();
-        this.calculate(overview);
+    public Basismass(String name){
+        this.kategorie=name;
+        this.values= new ArrayList<BasismassEigenschaften>();
     }
 
-    private ArrayList<String[]> calculate(ArrayList<DataOverview> overview){
-        return new ArrayList<String[]>();
+    private ArrayList<BasismassEigenschaften> calculate(ArrayList<DataOverview> overview){
+        return new ArrayList<BasismassEigenschaften>();
     }
 
-
-    public String getName() {
-        return name;
+    public String getKategorie() {
+        return kategorie;
     }
 
-    public ArrayList<String[]> getValues() {
+    public ArrayList<BasismassEigenschaften> getValues() {
         return values;
     }
 }
