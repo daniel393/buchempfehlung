@@ -8,49 +8,49 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 	// write your code here
-        Parser anal = new Parser("E011.csv");
+        Parser pars = new Parser("E011.csv");
 
 
         //Alter
         DataStruct alter= new DataStruct(0);
-        alter.assignData(anal.getsList());
+        alter.assignData(pars.getsList());
         alter.printData();
 
 
         //Geschlecht
         DataStruct geschlecht= new DataStruct(1);
-        geschlecht.assignData(anal.getsList());
+        geschlecht.assignData(pars.getsList());
         geschlecht.printData();
 
         //Verheiratet
         DataStruct verheiratet= new DataStruct(2);
-        verheiratet.assignData(anal.getsList());
+        verheiratet.assignData(pars.getsList());
         verheiratet.printData();
 
         //Kinderzahl
         DataStruct kinder= new DataStruct(3);
-        kinder.assignData(anal.getsList());
+        kinder.assignData(pars.getsList());
         kinder.printData();
 
         //Abschluss
         DataStruct abschluss= new DataStruct(4);
-        abschluss.assignData(anal.getsList());
+        abschluss.assignData(pars.getsList());
         abschluss.printData();
 
         //Beruf
         DataStruct beruf= new DataStruct(5);
-        beruf.assignData(anal.getsList());
+        beruf.assignData(pars.getsList());
         beruf.printData();
 
         //Einkommen
         DataStruct einkommen= new DataStruct(6);
-        einkommen.assignData(anal.getsList());
+        einkommen.assignData(pars.getsList());
         einkommen.printData();
 
 
         /*
         //Ausgabe aller Items einzeln
-        for(String[] s : anal.getsList()){
+        for(String[] s : pars.getsList()){
             for(int i=0;i<8;i++){
                 System.out.println(s[i]);
             }

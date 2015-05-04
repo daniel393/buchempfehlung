@@ -1,43 +1,37 @@
 package com.company;
 
-import javax.xml.crypto.Data;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * Created by Eike on 16.04.2015.
  */
 public class Basismass {
 
-    private DataStruct dataStruct;
-    private String merkmal;
+    private String name;
     //              Name            Elemente/Menge   Basismaß
     //              <18             E,D              0,5
-    private HashMap<String,HashMap<ArrayList<String>,Float>> values;
+    private ArrayList<String[]> values;
 
-    public Basismass(String sMerkmal, HashMap<String,HashMap<ArrayList<String>,Float>> sValues){
-        this.merkmal=sMerkmal;
+    public Basismass(ArrayList<String[]> sValues){
         this.values=sValues;
-        this.dataStruct=null;
     }
 
-    public Basismass(DataStruct data){
-        this.dataStruct= data;
-        this.merkmal=data.getName();
-        this.values= new HashMap<String,HashMap<ArrayList<String>,Float>>();
-        this.calculate();
+    public Basismass(String sName, ArrayList<DataOverview> overview){
+        this.name =sName;
+        this.values= new ArrayList<String[]>();
+        this.calculate(overview);
     }
 
-    private void calculate(){
-
+    private ArrayList<String[]> calculate(ArrayList<DataOverview> overview){
+        return new ArrayList<String[]>();
     }
 
 
-    public String getMerkmal() {
-        return merkmal;
+    public String getName() {
+        return name;
     }
 
-    public HashMap<String,HashMap<ArrayList<String>,Float>> getValues() {
+    public ArrayList<String[]> getValues() {
         return values;
     }
 }
