@@ -23,6 +23,7 @@ import java.util.List;
 
     public static void main(String[] args) throws IOException {
         // write your code here
+        /*
         Parser pars = new Parser("E011.csv");
 
         ArrayList<DataStruct> listOfStructs = new ArrayList<>();
@@ -49,7 +50,7 @@ import java.util.List;
 
         System.out.println("Tetst bla");
         listOfBasismass.get(0).getDataOfAttributes(list).print();
-
+        */
         // starting GUI
         launch(args);
     }
