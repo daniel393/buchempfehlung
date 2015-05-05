@@ -1,11 +1,16 @@
 package com.company;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.BackgroundFill;
 import javafx.stage.Stage;
 
+import java.awt.*;
+import java.beans.EventHandler;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,11 +19,14 @@ import java.util.List;
     public class Main  extends Application   {
 
         @Override
-        public void start(Stage primaryStage) throws Exception{
+        public void start(Stage primaryStage) throws Exception {
             Parent root = FXMLLoader.load(getClass().getResource("gui.fxml"));
             primaryStage.setTitle("Buchempfehlung");
-            primaryStage.setScene(new Scene(root, 291, 433));
+            primaryStage.setScene(new Scene(root, 361, 433));
             primaryStage.show();
+            primaryStage.setResizable(false);
+            root.setStyle("-fx-background-color: #D0D0D0");
+
         }
 
     public static void main(String[] args) throws IOException {

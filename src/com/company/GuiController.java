@@ -1,15 +1,24 @@
 package com.company;
 
+import javafx.animation.FadeTransition;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
+import java.awt.*;
+import java.beans.EventHandler;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.time.Duration;
+import java.util.*;
 
 /**
  * Created by auler on 05.05.2015.
@@ -34,7 +43,8 @@ public class GuiController {
     }
 
 
-    public void buchempfehlung(ActionEvent actionEvent) {
+    public void buchempfehlung(ActionEvent actionEvent) throws IOException {
+
 
         //Add Values
         auswahl.put(1, (String) cb1.getValue());
@@ -51,13 +61,13 @@ public class GuiController {
 
         //ArrayList<String> Kategorien = new ArrayList<>();
         ArrayList<String> merkmale = new ArrayList<>();
-        for(Map.Entry<Integer,String> entry: auswahl.entrySet()){
-            if(entry.getValue()!=null){
+        for (Map.Entry<Integer, String> entry : auswahl.entrySet()) {
+            if (entry.getValue() != null) {
                 merkmale.add(entry.getValue());
-                listOfStructs.add(new DataStruct((entry.getKey()-1)));
+                listOfStructs.add(new DataStruct((entry.getKey() - 1)));
             }
         }
-        for(DataStruct struct: listOfStructs){
+        for (DataStruct struct : listOfStructs) {
             struct.assignData(pars.getsList());
             //struct.printData();
             listOfBasismass.add(new Basismass(struct));
@@ -68,15 +78,31 @@ public class GuiController {
 
         BasismassStruct bms = listOfBasismass.get(0).getDataOfAttributes(merkmale);
 
-        if(bms!=null){
+        if (bms != null) {
             bms.print();
-        }
-        else{
+        } else {
             System.out.println("Aufgrund der vorhandenen Daten kann keine Buchempfehlung ausgesprochen werden");
         }
-
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("popup.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setTitle("Ihre Empfehlung");
+        stage.setScene(new Scene(root1));
+        stage.show();
         //System.out.print("Klick");
+    }
+
+    public void closeApp(ActionEvent actionEvent) {
+        System.exit(0);
+    }
+
+    public void newInstance(ActionEvent actionEvent) {
+
     }
 
     
 }
+
+
