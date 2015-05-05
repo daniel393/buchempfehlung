@@ -22,6 +22,9 @@ public class Akkumulator {
             }
         }
 
+        //values = merge(values); //merged list of values
+        values = konfliktBerechnung(values);
+
         return new Basismass(listFusion(m1.getKategorie(),m2.getKategorie()),values);
     }
 
@@ -37,20 +40,42 @@ public class Akkumulator {
         }
     }
 
+
+    // Evtl. nicht nötig
     private ArrayList<BasismassEigenschaften> merge(ArrayList<BasismassEigenschaften> list){
-        ArrayList<BasismassEigenschaften> returnlist= new ArrayList<BasismassEigenschaften>();
 
+        ArrayList<BasismassEigenschaften> returnList = new ArrayList<BasismassEigenschaften>(list);
+        for(int i=list.size()-1;i>=0;i--){
+            if(i==0){
+                continue;
+            }
+            if(list.get(i).getMenge().containsAll(list.get(i-1).getMenge()) && //i Enthält alle Elemente aus Menge i-1
+                    list.get(i).getMenge().size()==list.get(i-1).getMenge().size()){  //i hat die größe von i-1
+                returnList.get(i - 1).setFokaleMenge(returnList.get(i - 1).getFokaleMenge() + returnList.get(i).getFokaleMenge()); // fokale Menge = fm(i) + fm(i-1)
+                returnList.remove(i);
+            }
 
+        }
 
-        return returnlist;
+        return returnList;
     }
 
     private ArrayList<BasismassEigenschaften> konfliktBerechnung(ArrayList<BasismassEigenschaften> list){
-        ArrayList<BasismassEigenschaften> returnlist= new ArrayList<BasismassEigenschaften>();
+        float konflikt=0;
+        ArrayList<BasismassEigenschaften> returnList = new ArrayList<BasismassEigenschaften>(list);
+        for(int i=list.size()-1;i>=0;i--){
+            if(list.get(i).getMenge().isEmpty()){
+                konflikt+= list.get(i).getFokaleMenge();
+                returnList.remove(i);
+            }
+        }
+        float korrektur= (1/1-konflikt);
 
+        for(BasismassEigenschaften bme: returnList){
+            bme.setFokaleMenge(bme.getFokaleMenge()*korrektur);
+        }
 
-
-        return returnlist;
+        return returnList;
     }
 
     private ArrayList<String> schnittmenge(ArrayList<String> l1, ArrayList<String> l2){
@@ -68,8 +93,7 @@ public class Akkumulator {
     }
 
     private ArrayList<String> listFusion(ArrayList<String> l1, ArrayList<String> l2){
-        ArrayList<String> list = new ArrayList<String>();
-        list.addAll(l1);
+        ArrayList<String> list = new ArrayList<String>(l1);
         list.addAll(l2);
         return list;
     }

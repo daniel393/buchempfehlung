@@ -12,7 +12,7 @@ public class Main {
 
         ArrayList<DataStruct> listOfStructs = new ArrayList<>();
         ArrayList<Basismass> listOfBasismass = new ArrayList<>();
-        for(int i=0;i<2;i++){
+        for(int i=0;i<7;i++){
             listOfStructs.add(new DataStruct(i));
         }
         for(DataStruct struct: listOfStructs){

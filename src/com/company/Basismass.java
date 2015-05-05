@@ -57,8 +57,8 @@ public class Basismass {
         for(String kat: kategorie){
             System.out.print(kat + " ");
         }
-        System.out.println("\nMerkmale:");
         for(BasismassEigenschaften eig: values){
+            System.out.println("\nMerkmale:");
             for(String s: eig.getEigenschaft()){
                 System.out.print(s+" ");
             }

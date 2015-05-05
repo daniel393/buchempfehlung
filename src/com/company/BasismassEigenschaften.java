@@ -29,4 +29,8 @@ public class BasismassEigenschaften {
     public float getFokaleMenge() {
         return fokaleMenge;
     }
+
+    public void setFokaleMenge(float fokaleMenge) {
+        this.fokaleMenge = fokaleMenge;
+    }
 }
