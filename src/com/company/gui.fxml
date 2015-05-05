@@ -16,6 +16,7 @@
         <ChoiceBox fx:id="cb1" layoutX="188.0" layoutY="74.0" prefWidth="119.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
+              <String fx:value="-" />
               <String fx:value="&lt;18" />
               <String fx:value="19-24" />
               <String fx:value="25-35" />
@@ -30,6 +31,7 @@
         <ChoiceBox fx:id="cb2" layoutX="188.0" layoutY="112.0" prefWidth="119.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
+              <String fx:value="-" />
               <String fx:value="m" />
               <String fx:value="w" />
             </FXCollections>
@@ -42,6 +44,7 @@
         <ChoiceBox fx:id="cb4" layoutX="188.0" layoutY="188.0" prefWidth="119.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
+              <String fx:value="-" />
               <String fx:value="0" />
               <String fx:value="1" />
               <String fx:value="2" />
@@ -53,6 +56,7 @@
         <ChoiceBox fx:id="cb3" layoutX="188.0" layoutY="150.0" prefWidth="119.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
+              <String fx:value="-" />
               <String fx:value="ja" />
               <String fx:value="nein" />
             </FXCollections>
@@ -61,6 +65,7 @@
         <ChoiceBox fx:id="cb7" layoutX="188.0" layoutY="308.0" prefWidth="119.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
+              <String fx:value="-" />
               <String fx:value="&lt;1000" />
               <String fx:value="1000-1999" />
               <String fx:value="2000-2999" />
@@ -73,6 +78,7 @@
         <ChoiceBox fx:id="cb5" layoutX="188.0" layoutY="230.0" prefWidth="118.99990000000253">
           <items>
             <FXCollections fx:factory="observableArrayList">
+              <String fx:value="-" />
               <String fx:value="keiner" />
               <String fx:value="Hauptschule" />
               <String fx:value="Realschule" />
@@ -85,6 +91,7 @@
         <ChoiceBox fx:id="cb6" layoutX="188.0" layoutY="270.0" prefWidth="119.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
+              <String fx:value="-" />
               <String fx:value="arbeitslos" />
               <String fx:value="selbstständig" />
               <String fx:value="Lehrer" />
