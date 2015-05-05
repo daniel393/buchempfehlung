@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="257.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Pane layoutX="14.0" layoutY="14.0" prefHeight="405.0" prefWidth="229.0">
+      <children>
+        <Label layoutX="14.0" layoutY="79.0" text="Altersgruppe" />
+        <ChoiceBox id="1" layoutX="130.0" layoutY="76.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ChoiceBox>
+        <Label layoutX="14.0" layoutY="116.0" text="Geschlecht" />
+        <Label layoutX="14.0" layoutY="155.0" text="Familienstand" />
+        <ChoiceBox id="2" layoutX="130.0" layoutY="113.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ChoiceBox>
+        <Label layoutX="14.0" layoutY="192.0" text="Kinderzahl" />
+        <Label layoutX="14.0" layoutY="232.0" text="Einkommen" />
+        <Label layoutX="13.0" layoutY="270.0" text="Bildungsstand" />
+        <Label layoutX="13.0" layoutY="310.0" text="Beruf" />
+        <ChoiceBox id="4" layoutX="130.0" layoutY="189.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ChoiceBox>
+        <ChoiceBox id="3" layoutX="130.0" layoutY="152.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ChoiceBox>
+        <ChoiceBox id="5" layoutX="130.0" layoutY="229.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ChoiceBox>
+        <ChoiceBox id="6" layoutX="130.0" layoutY="267.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ChoiceBox>
+        <ChoiceBox id="7" layoutX="130.0" layoutY="307.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ChoiceBox>
+        <Button layoutX="44.0" layoutY="367.0" mnemonicParsing="false" text="Buch empfehlen lassen" />
+        <Separator layoutX="0.0" layoutY="57.0" prefWidth="229.0" />
+        <Label layoutX="1.0" layoutY="43.0" text="Merkmale">
+          <font>
+            <Font size="10.0" />
+          </font>
+        </Label>
+        <Separator layoutX="0.0" layoutY="345.0" prefWidth="229.0" />
+      </children>
+    </Pane>
+    <MenuBar layoutX="0.0" layoutY="0.0" prefWidth="257.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="Datei">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Neu" />
+            <MenuItem mnemonicParsing="false" text="Schließen" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Hilfe">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Dokumentation" />
+            <MenuItem mnemonicParsing="false" text="Über" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </children>
+</AnchorPane>
