@@ -45,7 +45,6 @@ public class GuiController {
 
     public void buchempfehlung(ActionEvent actionEvent) throws IOException {
 
-
         //Add Values
         auswahl.put(1, (String) cb1.getValue());
         auswahl.put(2, (String) cb2.getValue());

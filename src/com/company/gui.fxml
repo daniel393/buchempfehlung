@@ -92,8 +92,8 @@
           <items>
             <FXCollections fx:factory="observableArrayList">
               <String fx:value="-" />
-              <String fx:value="arbeitslos" />
-              <String fx:value="selbstständig" />
+              <String fx:value="Arbeitslos" />
+              <String fx:value="Selbstständig" />
               <String fx:value="Lehrer" />
               <String fx:value="Arbeiter" />
               <String fx:value="Führungskraft" />
