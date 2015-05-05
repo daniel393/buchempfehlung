@@ -26,6 +26,7 @@ import java.util.*;
 public class GuiController {
 
     private final Parser pars;
+    private ArrayList<ChoiceBox> listCb;
     public ChoiceBox cb1;
     public ChoiceBox cb2;
     public ChoiceBox cb3;
@@ -38,13 +39,33 @@ public class GuiController {
 
     public GuiController() throws IOException {
         auswahl= new HashMap<Integer,String>();
-
         pars = new Parser("E011.csv");
+
     }
 
 
     public void buchempfehlung(ActionEvent actionEvent) throws IOException {
+        ArrayList<ChoiceBox> listCb = new ArrayList<ChoiceBox>();
+        listCb.add(cb1);
+        listCb.add(cb2);
+        listCb.add(cb3);
+        listCb.add(cb4);
+        listCb.add(cb5);
+        listCb.add(cb6);
+        listCb.add(cb7);
 
+        for(int a=0;a<listCb.size();a++){
+            if(listCb.get(a).getValue()==null) {
+                auswahl.put(a, null);
+            }else if(listCb.get(a).getValue().toString().equals("-")){
+                auswahl.put(a, null);
+            }else{
+                auswahl.put(a, (String) (listCb.get(a).getValue()));
+            }
+
+        }
+
+        /*
         //Add Values
         auswahl.put(1, (String) cb1.getValue());
         auswahl.put(2, (String) cb2.getValue());
@@ -53,8 +74,8 @@ public class GuiController {
         auswahl.put(5, (String) cb5.getValue());
         auswahl.put(6, (String) cb6.getValue());
         auswahl.put(7, (String) cb7.getValue());
-
-        //Parameter für Berechnungen
+        */
+        //Parameter fï¿½r Berechnungen
         ArrayList<DataStruct> listOfStructs = new ArrayList<>();
         ArrayList<Basismass> listOfBasismass = new ArrayList<>();
 
@@ -63,7 +84,7 @@ public class GuiController {
         for (Map.Entry<Integer, String> entry : auswahl.entrySet()) {
             if (entry.getValue() != null) {
                 merkmale.add(entry.getValue());
-                listOfStructs.add(new DataStruct((entry.getKey() - 1)));
+                listOfStructs.add(new DataStruct((entry.getKey())));
             }
         }
         for (DataStruct struct : listOfStructs) {
