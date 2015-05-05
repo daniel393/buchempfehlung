@@ -25,6 +25,34 @@ public class Akkumulator {
         return new Basismass(listFusion(m1.getKategorie(),m2.getKategorie()),values);
     }
 
+    public ArrayList<Basismass> akkumulation(ArrayList<Basismass> list){
+        if(list.size()==1){
+            return list;
+        }
+        else {
+            list.add(akkumulation(list.get(0), list.get(1)));
+            list.remove(1);
+            list.remove(0);
+            return akkumulation(list);
+        }
+    }
+
+    private ArrayList<BasismassEigenschaften> merge(ArrayList<BasismassEigenschaften> list){
+        ArrayList<BasismassEigenschaften> returnlist= new ArrayList<BasismassEigenschaften>();
+
+
+
+        return returnlist;
+    }
+
+    private ArrayList<BasismassEigenschaften> konfliktBerechnung(ArrayList<BasismassEigenschaften> list){
+        ArrayList<BasismassEigenschaften> returnlist= new ArrayList<BasismassEigenschaften>();
+
+
+
+        return returnlist;
+    }
+
     private ArrayList<String> schnittmenge(ArrayList<String> l1, ArrayList<String> l2){
         ArrayList<String> list= new ArrayList<String>();
 

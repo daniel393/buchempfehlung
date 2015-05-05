@@ -10,56 +10,23 @@ public class Main {
 	// write your code here
         Parser pars = new Parser("E011.csv");
 
-
-        //Alter
-        DataStruct alter= new DataStruct(0);
-        alter.assignData(pars.getsList());
-        alter.printData();
-
-
-        //Geschlecht
-        DataStruct geschlecht= new DataStruct(1);
-        geschlecht.assignData(pars.getsList());
-        geschlecht.printData();
-
-        //Verheiratet
-        DataStruct verheiratet= new DataStruct(2);
-        verheiratet.assignData(pars.getsList());
-        verheiratet.printData();
-
-        //Kinderzahl
-        DataStruct kinder= new DataStruct(3);
-        kinder.assignData(pars.getsList());
-        kinder.printData();
-
-        //Abschluss
-        DataStruct abschluss= new DataStruct(4);
-        abschluss.assignData(pars.getsList());
-        abschluss.printData();
-
-        //Beruf
-        DataStruct beruf= new DataStruct(5);
-        beruf.assignData(pars.getsList());
-        beruf.printData();
-
-        //Einkommen
-        DataStruct einkommen= new DataStruct(6);
-        einkommen.assignData(pars.getsList());
-        einkommen.printData();
-
-
-        /*
-        //Ausgabe aller Items einzeln
-        for(String[] s : pars.getsList()){
-            for(int i=0;i<8;i++){
-                System.out.println(s[i]);
-            }
+        ArrayList<DataStruct> listOfStructs = new ArrayList<>();
+        ArrayList<Basismass> listOfBasismass = new ArrayList<>();
+        for(int i=0;i<2;i++){
+            listOfStructs.add(new DataStruct(i));
         }
-        */
+        for(DataStruct struct: listOfStructs){
+            struct.assignData(pars.getsList());
+            //struct.printData();
+            listOfBasismass.add(new Basismass(struct));
+        }
 
         //Akkumulation
         Akkumulator akku = new Akkumulator();
+        akku.akkumulation(listOfBasismass);
+        listOfBasismass.get(0).print();
 
+        /*
         //1. Basismaß
         ArrayList<String> kategorie1 = new ArrayList<String>();
         kategorie1.add("Haarfarbe");
@@ -107,6 +74,6 @@ public class Main {
         //akkumuliert
         System.out.println();
         akku.akkumulation(mass1,mass2).print();
-
+        */
     }
 }

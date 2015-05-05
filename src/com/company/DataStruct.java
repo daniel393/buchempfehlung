@@ -10,14 +10,14 @@ import java.util.Map;
 public class DataStruct {
 
     //Struktur[Altersgruppe/Merkmal][Buch][Anzahl]
-    private ArrayList<DataOverview> data;
     private HashMap<String,HashMap<String,Integer>> dataTemp =null;
 
     private int id;
     private String name;
+    private int amount;
 
     public DataStruct(int id){
-        data= new ArrayList<DataOverview>();
+        dataTemp= new HashMap<String,HashMap<String,Integer>>();
         this.id=id;
     }
 
@@ -43,14 +43,11 @@ public class DataStruct {
                 map.put(s[7], Integer.valueOf(1));
                 dataTemp.put(s[id],map);
             }
+
         }
 
-        //Assign Data to list
-        for(Map.Entry<String,HashMap<String,Integer>> entry: dataTemp.entrySet()){
-            for(Map.Entry<String,Integer> item: entry.getValue().entrySet()){
-                data.add(new DataOverview(entry.getKey(), item.getKey(), item.getValue()));
-            }
-        }
+        this.amount=count-1;
+
     }
 
     public void printData(){
@@ -63,13 +60,18 @@ public class DataStruct {
         }
     }
 
-    public ArrayList<DataOverview> getData(){
-        return data;
-    }
 
     public String getName() {
         return name;
     }
 
 
+    public int getAmount() {
+        return amount;
+    }
+
+
+    public HashMap<String, HashMap<String, Integer>> getDataTemp() {
+        return dataTemp;
+    }
 }
