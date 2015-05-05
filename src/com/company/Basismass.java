@@ -64,6 +64,23 @@ public class Basismass {
     }
 
     /**
+     * Gibt bestimmtes Maß für gegebene Attribute zurück
+     * @param list
+     * @return
+     */
+    public BasismassStruct getDataOfAttributes(ArrayList<String> list){
+        if(list==null){
+            return null;
+        }
+        for (BasismassStruct struct: values){
+            if(struct.getEigenschaft().containsAll(list)&& list.size()==struct.getEigenschaft().size()){
+                return struct;
+            }
+        }
+        return null;
+    }
+
+    /**
      * Gibt Kategorien Merkmale Mengen und Evidenzen aus
      */
     public void print(){
@@ -72,15 +89,7 @@ public class Basismass {
             System.out.print(kat + " ");
         }
         for(BasismassStruct eig: values){
-            System.out.println("\nMerkmale:");
-            for(String s: eig.getEigenschaft()){
-                System.out.print(s+" ");
-            }
-            System.out.println("\nMenge: ");
-            for(String element: eig.getMenge()){
-                System.out.print(element+" ");
-            }
-            System.out.println("\nEvidenz:\n"+ eig.getEvidenz());
+            eig.print();
         }
     }
 

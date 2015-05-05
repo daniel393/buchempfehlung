@@ -25,6 +25,17 @@ public class BasismassStruct {
         this.evidenz = evidenz;
     }
 
+    public void print(){
+        System.out.println("\nMerkmale:");
+        for(String s: this.eigenschaft){
+            System.out.print(s+" ");
+        }
+        System.out.println("\nMenge: ");
+        for(String element: this.menge){
+            System.out.print(element+" ");
+        }
+        System.out.println("\nEvidenz:\n"+ this.evidenz);
+    }
 
     public ArrayList<String> getEigenschaft() {
         return eigenschaft;

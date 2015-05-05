@@ -14,7 +14,7 @@ public class Main {
         ArrayList<Basismass> listOfBasismass = new ArrayList<>();
 
         //Zuweisen der Daten zu mehreren Basismaßen
-        for(int i=0;i<7;i++){
+        for(int i=0;i<2;i++){
             listOfStructs.add(new DataStruct(i));
         }
         for(DataStruct struct: listOfStructs){
@@ -28,5 +28,11 @@ public class Main {
         akku.akkumulation(listOfBasismass);
         listOfBasismass.get(0).print();
 
+        ArrayList<String> list = new ArrayList<>();
+        list.add(">65");
+        list.add("w");
+
+        System.out.println("Tetst bla");
+        listOfBasismass.get(0).getDataOfAttributes(list).print();
     }
 }

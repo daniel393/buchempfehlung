@@ -52,8 +52,8 @@ public class Akkumulator {
     }
 
 
-    // Evtl. nicht nötig
 
+    // nicht nötig da die Evidenzen unter beachtung der einzelnen Merkmale betrachtet werden.
     /**
      * merged Evidenzen gleicher Mengen
      * @param list

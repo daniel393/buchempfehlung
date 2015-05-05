@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56243d66-13e3-489b-8563-bafcd3b2fe3a" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\holle\06_Git\buchempfehlung\src\com\company\BasismassEigenschaften.java" afterPath="$PROJECT_DIR$/src/com/company/BasismassStruct.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Akkumulator.java" afterPath="$PROJECT_DIR$/src/com/company/Akkumulator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Basismass.java" afterPath="$PROJECT_DIR$/src/com/company/Basismass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/DataStruct.java" afterPath="$PROJECT_DIR$/src/com/company/DataStruct.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/BasismassStruct.java" afterPath="$PROJECT_DIR$/src/com/company/BasismassStruct.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Parser.java" afterPath="$PROJECT_DIR$/src/com/company/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="buchempfehlung.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +26,61 @@
     <favorites_list name="buchempfehlung" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.29896906">
+              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Basismass.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Basismass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="91" column="24" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1370#1387#0" expanded="true" />
+                <element signature="e#1532#1540#0" expanded="true" />
+                <element signature="e#1683#1691#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasismassStruct.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/BasismassStruct.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Akkumulator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Akkumulator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="57" column="39" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
+              <folding>
+                <element signature="e#418#435#0" expanded="true" />
+                <element signature="e#1937#1954#0" expanded="true" />
+                <element signature="e#2822#2839#0" expanded="true" />
+                <element signature="e#3489#3497#0" expanded="true" />
+                <element signature="e#3941#3949#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -57,11 +108,11 @@
         <option value="$PROJECT_DIR$/src/com/company/Akkumulation.java" />
         <option value="$PROJECT_DIR$/src/com/company/DataOverview.java" />
         <option value="$PROJECT_DIR$/src/com/company/BasismassEigenschaften.java" />
-        <option value="$PROJECT_DIR$/src/com/company/BasismassStruct.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Basismass.java" />
         <option value="$PROJECT_DIR$/src/com/company/Parser.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Akkumulator.java" />
         <option value="$PROJECT_DIR$/src/com/company/DataStruct.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Akkumulator.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Basismass.java" />
+        <option value="$PROJECT_DIR$/src/com/company/BasismassStruct.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
       </list>
     </option>
@@ -345,7 +396,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16981132" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34591195" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24231333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -415,10 +466,6 @@
             <element signature="e#1370#1387#0" expanded="true" />
             <element signature="e#1532#1540#0" expanded="true" />
             <element signature="e#1683#1691#0" expanded="true" />
-            <element signature="e#2757#2758#0" expanded="true" />
-            <element signature="e#2789#2790#0" expanded="true" />
-            <element signature="e#2842#2843#0" expanded="true" />
-            <element signature="e#2871#2872#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -437,10 +484,10 @@
           <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
           <folding>
             <element signature="e#418#435#0" expanded="true" />
-            <element signature="e#1868#1885#0" expanded="true" />
-            <element signature="e#2753#2770#0" expanded="true" />
-            <element signature="e#3420#3428#0" expanded="true" />
-            <element signature="e#3872#3880#0" expanded="true" />
+            <element signature="e#1937#1954#0" expanded="true" />
+            <element signature="e#2822#2839#0" expanded="true" />
+            <element signature="e#3489#3497#0" expanded="true" />
+            <element signature="e#3941#3949#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -488,10 +535,6 @@
             <element signature="e#1370#1387#0" expanded="true" />
             <element signature="e#1532#1540#0" expanded="true" />
             <element signature="e#1683#1691#0" expanded="true" />
-            <element signature="e#2757#2758#0" expanded="true" />
-            <element signature="e#2789#2790#0" expanded="true" />
-            <element signature="e#2842#2843#0" expanded="true" />
-            <element signature="e#2871#2872#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -502,10 +545,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#418#435#0" expanded="true" />
-            <element signature="e#1868#1885#0" expanded="true" />
-            <element signature="e#2753#2770#0" expanded="true" />
-            <element signature="e#3420#3428#0" expanded="true" />
-            <element signature="e#3872#3880#0" expanded="true" />
+            <element signature="e#1937#1954#0" expanded="true" />
+            <element signature="e#2822#2839#0" expanded="true" />
+            <element signature="e#3489#3497#0" expanded="true" />
+            <element signature="e#3941#3949#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -548,23 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Basismass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08388158">
-          <caret line="66" column="56" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1370#1387#0" expanded="true" />
-            <element signature="e#1532#1540#0" expanded="true" />
-            <element signature="e#1683#1691#0" expanded="true" />
-            <element signature="e#2757#2758#0" expanded="true" />
-            <element signature="e#2789#2790#0" expanded="true" />
-            <element signature="e#2842#2843#0" expanded="true" />
-            <element signature="e#2871#2872#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6430921">
@@ -574,28 +600,6 @@
             <element signature="e#286#296#0" expanded="true" />
             <element signature="e#649#650#0" expanded="true" />
             <element signature="e#677#678#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/BasismassStruct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16776316">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Akkumulator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.422">
-          <caret line="121" column="39" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="39" />
-          <folding>
-            <element signature="e#418#435#0" expanded="true" />
-            <element signature="e#1868#1885#0" expanded="true" />
-            <element signature="e#2753#2770#0" expanded="true" />
-            <element signature="e#3420#3428#0" expanded="true" />
-            <element signature="e#3872#3880#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -611,10 +615,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Akkumulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="39" selection-start-line="57" selection-start-column="39" selection-end-line="57" selection-end-column="39" />
+          <folding>
+            <element signature="e#418#435#0" expanded="true" />
+            <element signature="e#1937#1954#0" expanded="true" />
+            <element signature="e#2822#2839#0" expanded="true" />
+            <element signature="e#3489#3497#0" expanded="true" />
+            <element signature="e#3941#3949#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/BasismassStruct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Basismass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="91" column="24" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1370#1387#0" expanded="true" />
+            <element signature="e#1532#1540#0" expanded="true" />
+            <element signature="e#1683#1691#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.422">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.29896906">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
