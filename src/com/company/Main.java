@@ -7,7 +7,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-	// write your code here
+        // write your code here
         Parser pars = new Parser("E011.csv");
 
         ArrayList<DataStruct> listOfStructs = new ArrayList<>();
