@@ -2,49 +2,35 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 import static java.util.Map.*;
 
 /**
  * Created by Eike on 16.04.2015.
- * Enthält Basismaß und zugehörige Datenstrukturen um diese zu vereinigen
  */
 public class Basismass {
 
-    //Enthält die verwendeten Kategorien
     private ArrayList<String> kategorie;
-    //Enthält die Daten für die Einzelnen Eigenschaften/Mengen/Evidenzen
-    private ArrayList<BasismassStruct> values;
+    //              Eigenschaft            Elemente/Menge   Basismaß
+    //              <18                     E,D              0,5
+    private ArrayList<BasismassEigenschaften> values;
 
-    /**
-     * Erzeugt Basismaß mit Kategorie und den gegebenen Werten
-     * @param kategorien
-     * @param sValues
-     */
-    public Basismass(ArrayList<String> kategorien,ArrayList<BasismassStruct> sValues){
-        this.kategorie= kategorien;
+    public Basismass(ArrayList<String> name,ArrayList<BasismassEigenschaften> sValues){
+        this.kategorie= name;
         this.values=sValues;
     }
 
-    /**
-     * Erzeugt Basismaß Struktur aus gegebener Datenstruktur
-     * @param struct
-     */
     public Basismass(DataStruct struct){
         this.kategorie= new ArrayList<String>();
         this.kategorie.add(struct.getName());
-        this.values= this.calculate(struct.getData(),struct.getAmount());
+        this.values= this.calculate(struct.getDataTemp(),struct.getAmount());
 
     }
 
-    /**
-     * Errechnet die Werte aus den gegebenen Daten aus dem DataStruct
-     * @param data
-     * @param gesamtanzahl
-     * @return
-     */
-    private ArrayList<BasismassStruct> calculate(HashMap<String,HashMap<String,Integer>> data ,int gesamtanzahl){
-        ArrayList<BasismassStruct> list =new ArrayList<BasismassStruct>();
+    private ArrayList<BasismassEigenschaften> calculate(HashMap<String,HashMap<String,Integer>> data ,int gesamtanzahl){
+        ArrayList<BasismassEigenschaften> list =new ArrayList<BasismassEigenschaften>();
+
 
         for(Entry<String,HashMap<String,Integer>> eigenschaft: data.entrySet()){
             ArrayList<String> eigenschaften = new ArrayList<String>();
@@ -57,22 +43,22 @@ public class Basismass {
                 anzahl+= (int)entry.getValue();
             }
 
-            BasismassStruct bmeig= new BasismassStruct(eigenschaften,menge, (float)anzahl/gesamtanzahl);
+            BasismassEigenschaften bmeig= new BasismassEigenschaften(eigenschaften,menge, (float)anzahl/gesamtanzahl);
             list.add(bmeig);
         }
+
+
+
         return list;
     }
 
-    /**
-     * Gibt Kategorien Merkmale Mengen und Evidenzen aus
-     */
     public void print(){
         System.out.println("Kategorien:");
         for(String kat: kategorie){
             System.out.print(kat + " ");
         }
-        for(BasismassStruct eig: values){
-            System.out.println("\nMerkmale:");
+        System.out.println("\nMerkmale:");
+        for(BasismassEigenschaften eig: values){
             for(String s: eig.getEigenschaft()){
                 System.out.print(s+" ");
             }
@@ -80,7 +66,7 @@ public class Basismass {
             for(String element: eig.getMenge()){
                 System.out.print(element+" ");
             }
-            System.out.println("\nEvidenz:\n"+ eig.getEvidenz());
+            System.out.println("\nEvidenz:\n"+ eig.getFokaleMenge());
         }
     }
 
@@ -88,7 +74,7 @@ public class Basismass {
         return kategorie;
     }
 
-    public ArrayList<BasismassStruct> getValues() {
+    public ArrayList<BasismassEigenschaften> getValues() {
         return values;
     }
 }
