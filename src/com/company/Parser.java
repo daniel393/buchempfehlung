@@ -1,3 +1,4 @@
+
 package com.company;
 
 import java.io.IOException;
@@ -13,6 +14,11 @@ public class Parser {
 
     private ArrayList<String[]> sList = new ArrayList<String[]>();
 
+    /**
+     * Parst Daten aus File und gibt in Array Liste zurück
+     * @param filename
+     * @throws IOException
+     */
     public Parser(String filename) throws IOException {
         Stream<String> lines = Files.lines(Paths.get(filename));
         lines.forEach(s -> sList.add(s.split(";")));
