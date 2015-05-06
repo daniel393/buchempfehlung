@@ -37,7 +37,7 @@ public class BasismassStruct {
             buecher.add(element);
             System.out.print(element+" ");
         }
-        ModelContext.getInstance().setBooks(buecher.toString());
+        ModelContext.getInstance().setBooks(buecher.toString().replace("[", "").replace("]", ""));
         System.out.println("\nEvidenz:\n"+ this.evidenz);
     }
 
