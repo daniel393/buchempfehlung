@@ -71,7 +71,7 @@
               <String fx:value="2000-2999" />
               <String fx:value="3000-3999" />
               <String fx:value="4000-4999" />
-              <String fx:value="&gt;5000" />
+              <String fx:value="5000 und mehr" />
             </FXCollections>
           </items>
         </ChoiceBox>
@@ -93,10 +93,10 @@
             <FXCollections fx:factory="observableArrayList">
               <String fx:value="-" />
               <String fx:value="Arbeitslos" />
-              <String fx:value="Selbstständig" />
+              <String fx:value="Selbststaendig" />
               <String fx:value="Lehrer" />
               <String fx:value="Arbeiter" />
-              <String fx:value="Führungskraft" />
+              <String fx:value="Fuehrungskraft" />
               <String fx:value="Hausfrau" />
               <String fx:value="Angestellter" />
               <String fx:value="Rentner" />
