@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.*;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BackgroundFill;
 import javafx.stage.Stage;
 
@@ -25,6 +27,7 @@ import java.util.List;
             primaryStage.setScene(new Scene(root, 361, 433));
             primaryStage.show();
             primaryStage.setResizable(false);
+            primaryStage.getIcons().add(new Image("icon.png"));
             root.setStyle("-fx-background-color: #D0D0D0");
 
         }
