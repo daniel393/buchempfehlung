@@ -1,5 +1,6 @@
 package com.company;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -11,6 +12,7 @@ public class BasismassStruct {
     private ArrayList<String> eigenschaft;
     private ArrayList<String> menge;
     private float evidenz;
+    private ArrayList buecher = new ArrayList<>();
 
     /**
      * Datenstruktur für die Struktur des Basismaßes. Enthält die Eigenschaft die Verwendet wird, die Menge der empfohlenen Bücher dafür
@@ -32,8 +34,10 @@ public class BasismassStruct {
         }
         System.out.println("\nMenge: ");
         for(String element: this.menge){
+            buecher.add(element);
             System.out.print(element+" ");
         }
+        ModelContext.getInstance().setBooks(buecher.toString());
         System.out.println("\nEvidenz:\n"+ this.evidenz);
     }
 
