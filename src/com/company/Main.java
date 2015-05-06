@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BackgroundFill;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.awt.*;
@@ -20,6 +21,8 @@ import java.util.List;
 
     public class Main  extends Application   {
 
+        public static Stage stage;
+
         @Override
         public void start(Stage primaryStage) throws Exception {
             Parent root = FXMLLoader.load(getClass().getResource("gui.fxml"));
@@ -29,7 +32,7 @@ import java.util.List;
             primaryStage.setResizable(false);
             primaryStage.getIcons().add(new Image("icon.png"));
             root.setStyle("-fx-background-color: #D0D0D0");
-
+            stage = primaryStage;
         }
 
     public static void main(String[] args) throws IOException {
