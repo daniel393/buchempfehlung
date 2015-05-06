@@ -140,6 +140,9 @@ public class GuiController {
 
         }
     }
+
+    public void openDoc(ActionEvent actionEvent) {
+    }
 }
 
 
