@@ -1,27 +1,19 @@
 package com.company;
 
-import javafx.animation.FadeTransition;
-import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.awt.*;
-import java.beans.EventHandler;
 import java.io.File;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.*;
-import java.util.logging.Logger;
 
 /**
  * Created by auler on 05.05.2015.
@@ -60,6 +52,8 @@ public class GuiController {
         listCb.add(cb6);
         listCb.add(cb7);
 
+        BasismassStruct bms = null;
+
         for(int a=0;a<listCb.size();a++){
             if(listCb.get(a).getValue()==null) {
                 auswahl.put(a, null);
@@ -71,16 +65,6 @@ public class GuiController {
 
         }
 
-        /*
-        //Add Values
-        auswahl.put(1, (String) cb1.getValue());
-        auswahl.put(2, (String) cb2.getValue());
-        auswahl.put(3, (String) cb3.getValue());
-        auswahl.put(4, (String) cb4.getValue());
-        auswahl.put(5, (String) cb5.getValue());
-        auswahl.put(6, (String) cb6.getValue());
-        auswahl.put(7, (String) cb7.getValue());
-        */
         //Parameter f�r Berechnungen
         ArrayList<DataStruct> listOfStructs = new ArrayList<>();
         ArrayList<Basismass> listOfBasismass = new ArrayList<>();
@@ -93,16 +77,19 @@ public class GuiController {
                 listOfStructs.add(new DataStruct((entry.getKey())));
             }
         }
-        for (DataStruct struct : listOfStructs) {
-            struct.assignData(pars.getsList());
-            //struct.printData();
-            listOfBasismass.add(new Basismass(struct));
-        }
-        //Akkumulation
-        Akkumulator akku = new Akkumulator();
-        akku.akkumulation(listOfBasismass);
 
-        BasismassStruct bms = listOfBasismass.get(0).getDataOfAttributes(merkmale);
+        if(merkmale.size()>0){
+            for (DataStruct struct : listOfStructs) {
+                struct.assignData(pars.getsList());
+                //struct.printData();
+                listOfBasismass.add(new Basismass(struct));
+            }
+            //Akkumulation
+            Akkumulator akku = new Akkumulator();
+            akku.akkumulation(listOfBasismass);
+
+            bms = listOfBasismass.get(0).getDataOfAttributes(merkmale);
+        }
 
         if (bms != null) {
             bms.print();
@@ -120,6 +107,7 @@ public class GuiController {
         stage.show();
         //System.out.print("Klick");
     }
+
 
     public void closeApp(ActionEvent actionEvent) {
         System.exit(0);
