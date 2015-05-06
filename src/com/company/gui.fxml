@@ -115,7 +115,7 @@
     </Pane>
     <MenuBar layoutX="0.0" layoutY="0.0" prefWidth="373.0">
       <menus>
-        <Menu mnemonicParsing="false" text="Datei">
+        <Menu mnemonicParsing="false" text="Neue Daten ...">
           <items>
             <MenuItem mnemonicParsing="false" onAction="#newInstance" text="Neu" />
             <MenuItem mnemonicParsing="false" onAction="#closeApp" text="Schließen" />

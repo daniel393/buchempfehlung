@@ -11,7 +11,7 @@
   <children>
     <Pane blendMode="DARKEN" depthTest="INHERIT" layoutX="0.0" layoutY="0.0" prefHeight="143.0001220703125" prefWidth="282.0">
       <children>
-        <Label layoutX="121.0" layoutY="62.0" text="Name" textFill="#10cc00">
+        <Label fx:id="buchname" layoutX="80.0" layoutY="62.0" text="" textFill="#10cc00">
           <font>
             <Font size="15.0" fx:id="x1" />
           </font>
