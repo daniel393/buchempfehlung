@@ -121,7 +121,7 @@
         </Menu>
         <Menu mnemonicParsing="false" text="Hilfe">
           <items>
-            <MenuItem mnemonicParsing="false" text="Dokumentation" />
+            <MenuItem mnemonicParsing="false" text="Dokumentation" onAction="#openDoc" />
             <MenuItem mnemonicParsing="false" text="Über" />
           </items>
         </Menu>
