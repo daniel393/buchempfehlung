@@ -31,7 +31,8 @@ import java.util.List;
             primaryStage.show();
             primaryStage.setResizable(false);
             primaryStage.getIcons().add(new Image("icon.png"));
-            root.setStyle("-fx-background-color: #D0D0D0");
+            root.setStyle("-fx-background-image: url('bg.jpg')");
+            //root.setStyle("-fx-background-color: #B8B8B8");
             stage = primaryStage;
         }
 
