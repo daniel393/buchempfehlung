@@ -11,12 +11,12 @@
   <children>
     <Pane blendMode="DARKEN" depthTest="INHERIT" layoutX="0.0" layoutY="0.0" prefHeight="143.0001220703125" prefWidth="282.0">
       <children>
-        <Label fx:id="buchname" layoutX="80.0" layoutY="62.0" text="" textFill="#10cc00">
+        <Label fx:id="buchname" layoutX="10.0" layoutY="55.0" text="" textFill="#10cc00">
           <font>
             <Font size="15.0" fx:id="x1" />
           </font>
         </Label>
-        <Label font="$x1" layoutX="50.0" layoutY="30.0" text="Das Buch sollten Sie lesen" />
+        <Label font="$x1" layoutX="10.0" layoutY="30.0" text="Folgende Bücher sollten Sie lesen:" />
         <Button fx:id="closeButton" layoutX="106.0" layoutY="100.0" mnemonicParsing="false" onAction="#closePopup" text="schließen" />
       </children>
     </Pane>

@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.text.Font?>
-<?import java.lang.*?>
+
 <AnchorPane id="AnchorPane" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="361.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.company.GuiController">
   <children>
     <Pane fx:id="pane" layoutX="0.0" layoutY="14.0" prefHeight="418.9999000000025" prefWidth="361.0">
       <children>
-        <Label layoutX="72.0" layoutY="77.0" text="Altersgruppe" />
-        <ChoiceBox fx:id="cb1" layoutX="188.0" layoutY="74.0" prefWidth="119.0">
+        <Label layoutX="70.0" layoutY="75.0" text="Altersgruppe" />
+        <ChoiceBox fx:id="cb1" layoutX="190.0" layoutY="75.0" prefWidth="119.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
               <String fx:value="-" />
@@ -24,9 +27,9 @@
             </FXCollections>
           </items>
         </ChoiceBox>
-        <Label layoutX="72.0" layoutY="113.0" text="Geschlecht" />
-        <Label layoutX="72.0" layoutY="152.0" text="Verheiratet" />
-        <ChoiceBox fx:id="cb2" layoutX="188.0" layoutY="112.0" prefWidth="119.0">
+        <Label layoutX="70.0" layoutY="115.0" text="Geschlecht" />
+        <Label layoutX="70.0" layoutY="155.0" text="Verheiratet" />
+        <ChoiceBox fx:id="cb2" layoutX="190.0" layoutY="115.0" prefWidth="119.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
               <String fx:value="-" />
@@ -35,11 +38,11 @@
             </FXCollections>
           </items>
         </ChoiceBox>
-        <Label layoutX="72.0" layoutY="189.0" text="Kinderzahl" />
-        <Label layoutX="72.0" layoutY="310.0" text="Einkommen" />
-        <Label layoutX="71.0" layoutY="232.0" text="Bildungsstand" />
-        <Label layoutX="71.0" layoutY="272.0" text="Beruf" />
-        <ChoiceBox fx:id="cb4" layoutX="188.0" layoutY="188.0" prefWidth="119.0">
+        <Label layoutX="70.0" layoutY="195.0" text="Kinderzahl" />
+        <Label layoutX="70.0" layoutY="315.0" text="Einkommen" />
+        <Label layoutX="70.0" layoutY="235.0" text="Bildungsstand" />
+        <Label layoutX="70.0" layoutY="275.0" text="Beruf" />
+        <ChoiceBox fx:id="cb4" layoutX="190.0" layoutY="195.0" prefWidth="119.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
               <String fx:value="-" />
@@ -51,7 +54,7 @@
             </FXCollections>
           </items>
         </ChoiceBox>
-        <ChoiceBox fx:id="cb3" layoutX="188.0" layoutY="150.0" prefWidth="119.0">
+        <ChoiceBox fx:id="cb3" layoutX="190.0" layoutY="155.0" prefWidth="119.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
               <String fx:value="-" />
@@ -60,7 +63,7 @@
             </FXCollections>
           </items>
         </ChoiceBox>
-        <ChoiceBox fx:id="cb7" layoutX="188.0" layoutY="308.0" prefWidth="119.0">
+        <ChoiceBox fx:id="cb7" layoutX="190.0" layoutY="315.0" prefWidth="119.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
               <String fx:value="-" />
@@ -73,7 +76,7 @@
             </FXCollections>
           </items>
         </ChoiceBox>
-        <ChoiceBox fx:id="cb5" layoutX="188.0" layoutY="230.0" prefWidth="118.99990000000253">
+        <ChoiceBox fx:id="cb5" layoutX="190.0" layoutY="235.0" prefWidth="118.99990000000253">
           <items>
             <FXCollections fx:factory="observableArrayList">
               <String fx:value="-" />
@@ -86,7 +89,7 @@
             </FXCollections>
           </items>
         </ChoiceBox>
-        <ChoiceBox fx:id="cb6" layoutX="188.0" layoutY="270.0" prefWidth="119.0">
+        <ChoiceBox fx:id="cb6" layoutX="190.0" layoutY="275.0" prefWidth="119.0">
           <items>
             <FXCollections fx:factory="observableArrayList">
               <String fx:value="-" />
@@ -101,14 +104,14 @@
             </FXCollections>
           </items>
         </ChoiceBox>
-        <Button layoutX="119.0" layoutY="364.0" mnemonicParsing="false" onAction="#buchempfehlung" text="Buch empfehlen lassen" />
+        <Button layoutX="119.0" layoutY="374.0" mnemonicParsing="false" onAction="#buchempfehlung" text="Buch empfehlen lassen" />
         <Separator layoutX="14.0" layoutY="55.0" prefWidth="333.0" />
-        <Label layoutX="59.0" layoutY="41.0" text="Merkmale">
+        <Label layoutX="14.0" layoutY="41.0" text="Merkmale">
           <font>
             <Font size="10.0" />
           </font>
         </Label>
-        <Separator layoutX="14.0" layoutY="342.0" prefWidth="333.0" />
+        <Separator layoutX="14.0" layoutY="355.0" prefWidth="333.0" />
       </children>
     </Pane>
     <MenuBar layoutX="0.0" layoutY="0.0" prefWidth="373.0">
@@ -121,8 +124,8 @@
         </Menu>
         <Menu mnemonicParsing="false" text="Hilfe">
           <items>
-            <MenuItem mnemonicParsing="false" text="Dokumentation" onAction="#openDoc" />
-            <MenuItem mnemonicParsing="false" text="Über" onAction="#openAbout" />
+            <MenuItem mnemonicParsing="false" onAction="#openDoc" text="Dokumentation" />
+            <MenuItem mnemonicParsing="false" onAction="#openAbout" text="Über" />
           </items>
         </Menu>
       </menus>
