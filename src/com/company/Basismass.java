@@ -73,7 +73,7 @@ public class Basismass {
             return null;
         }
         for (BasismassStruct struct: values){
-            if(struct.getEigenschaft().containsAll(list)&& list.size()==struct.getEigenschaft().size()){
+            if(struct.getMerkmal().containsAll(list)&& list.size()==struct.getMerkmal().size()){
                 return struct;
             }
         }

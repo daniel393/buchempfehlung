@@ -1,6 +1,5 @@
 package com.company;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -9,7 +8,7 @@ import java.util.ArrayList;
  */
 public class BasismassStruct {
 
-    private ArrayList<String> eigenschaft;
+    private ArrayList<String> merkmal;
     private ArrayList<String> menge;
     private float evidenz;
     private ArrayList buecher = new ArrayList<>();
@@ -17,19 +16,19 @@ public class BasismassStruct {
     /**
      * Datenstruktur für die Struktur des Basismaßes. Enthält die Eigenschaft die Verwendet wird, die Menge der empfohlenen Bücher dafür
      * und die zugehörigen fokalen Mengen bzw. Evidenzen
-     * @param eigenschaft
+     * @param merkmal
      * @param menge
      * @param evidenz
      */
-    public BasismassStruct(ArrayList<String> eigenschaft, ArrayList<String> menge, float evidenz) {
-        this.eigenschaft = eigenschaft;
+    public BasismassStruct(ArrayList<String> merkmal, ArrayList<String> menge, float evidenz) {
+        this.merkmal = merkmal;
         this.menge = menge;
         this.evidenz = evidenz;
     }
 
     public void print(){
         System.out.println("\nMerkmale:");
-        for(String s: this.eigenschaft){
+        for(String s: this.merkmal){
             System.out.print(s+" ");
         }
         System.out.println("\nMenge: ");
@@ -41,8 +40,8 @@ public class BasismassStruct {
         System.out.println("\nEvidenz:\n"+ this.evidenz);
     }
 
-    public ArrayList<String> getEigenschaft() {
-        return eigenschaft;
+    public ArrayList<String> getMerkmal() {
+        return merkmal;
     }
 
     public ArrayList<String> getMenge() {

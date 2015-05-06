@@ -22,7 +22,7 @@ public class Akkumulator {
 
         for(BasismassStruct eigenschaftenM1 : m1.getValues()){
             for(BasismassStruct eigenschaftenM2 : m2.getValues()){
-                values.add(new BasismassStruct(listFusion(eigenschaftenM1.getEigenschaft(),eigenschaftenM2.getEigenschaft()), //Name
+                values.add(new BasismassStruct(listFusion(eigenschaftenM1.getMerkmal(),eigenschaftenM2.getMerkmal()), //Name
                         schnittmenge(eigenschaftenM1.getMenge(),eigenschaftenM2.getMenge()),    //Schnittmenge
                         eigenschaftenM1.getEvidenz()* eigenschaftenM2.getEvidenz()));   //Multiplikation
             }

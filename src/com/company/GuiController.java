@@ -38,11 +38,12 @@ public class GuiController {
 
     public GuiController() throws IOException {
         auswahl= new HashMap<Integer,String>();
+        pars = new Parser(fileToRead);
     }
 
 
     public void buchempfehlung(ActionEvent actionEvent) throws IOException {
-        pars = new Parser(fileToRead);
+
         ArrayList<ChoiceBox> listCb = new ArrayList<ChoiceBox>();
         listCb.add(cb1);
         listCb.add(cb2);
@@ -54,6 +55,8 @@ public class GuiController {
 
         BasismassStruct bms = null;
 
+
+        //spezifische Merkmale zuweisen
         for(int a=0;a<listCb.size();a++){
             if(listCb.get(a).getValue()==null) {
                 auswahl.put(a, null);
@@ -69,7 +72,6 @@ public class GuiController {
         ArrayList<DataStruct> listOfStructs = new ArrayList<>();
         ArrayList<Basismass> listOfBasismass = new ArrayList<>();
 
-        //ArrayList<String> Kategorien = new ArrayList<>();
         ArrayList<String> merkmale = new ArrayList<>();
         for (Map.Entry<Integer, String> entry : auswahl.entrySet()) {
             if (entry.getValue() != null) {
@@ -118,6 +120,11 @@ public class GuiController {
         File file = fileChooser.showOpenDialog(Main.stage);
         if (file != null) {
             this.fileToRead=file.toString();
+            try {
+                pars = new Parser(fileToRead);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             //openFile(file);
         }
     }
