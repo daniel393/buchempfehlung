@@ -10,20 +10,26 @@ import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.awt.*;
 import java.beans.EventHandler;
+import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.*;
+import java.util.logging.Logger;
 
 /**
  * Created by auler on 05.05.2015.
  */
 public class GuiController {
+
+    final FileChooser fileChooser = new FileChooser();
+    private Desktop desktop = Desktop.getDesktop();
 
     private final Parser pars;
     private ArrayList<ChoiceBox> listCb;
@@ -121,9 +127,19 @@ public class GuiController {
 
     public void newInstance(ActionEvent actionEvent) {
 
+        File file = fileChooser.showOpenDialog(Main.stage);
+        if (file != null) {
+            openFile(file);
+        }
     }
 
-    
+    private void openFile(File file) {
+        try {
+            desktop.open(file);
+        } catch (IOException ex) {
+
+        }
+    }
 }
 
 
