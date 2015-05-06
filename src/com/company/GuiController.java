@@ -101,6 +101,7 @@ public class GuiController {
         if (bms != null) {
             bms.print();
         } else {
+            ModelContext.getInstance().setBooks("Keine Empfehlung.");
             System.out.println("Aufgrund der vorhandenen Daten kann keine Buchempfehlung ausgesprochen werden");
         }
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("popup.fxml"));
