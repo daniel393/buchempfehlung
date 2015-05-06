@@ -22,8 +22,9 @@ public class GuiController {
 
     final FileChooser fileChooser = new FileChooser();
     private Desktop desktop = Desktop.getDesktop();
+    private String fileToRead="E011.csv";
 
-    private final Parser pars;
+    private Parser pars;
     private ArrayList<ChoiceBox> listCb;
     public ChoiceBox cb1;
     public ChoiceBox cb2;
@@ -37,12 +38,11 @@ public class GuiController {
 
     public GuiController() throws IOException {
         auswahl= new HashMap<Integer,String>();
-        pars = new Parser("E011.csv");
-
     }
 
 
     public void buchempfehlung(ActionEvent actionEvent) throws IOException {
+        pars = new Parser(fileToRead);
         ArrayList<ChoiceBox> listCb = new ArrayList<ChoiceBox>();
         listCb.add(cb1);
         listCb.add(cb2);
@@ -117,13 +117,15 @@ public class GuiController {
 
         File file = fileChooser.showOpenDialog(Main.stage);
         if (file != null) {
-            openFile(file);
+            this.fileToRead=file.toString();
+            //openFile(file);
         }
     }
 
     private void openFile(File file) {
         try {
             desktop.open(file);
+
         } catch (IOException ex) {
 
         }
