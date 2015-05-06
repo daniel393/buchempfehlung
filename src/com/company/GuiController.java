@@ -140,6 +140,17 @@ public class GuiController {
 
         }
     }
+
+    public void openAbout(ActionEvent actionEvent) throws IOException{
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("about.fxml"));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setTitle("About");
+        stage.setScene(new Scene(root1));
+        stage.show();
+    }
 }
 
 
