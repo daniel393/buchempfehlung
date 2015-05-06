@@ -132,6 +132,13 @@ public class GuiController {
     }
 
     public void openDoc(ActionEvent actionEvent) {
+        File file = new File("WBS Evidenzen Dokumentation.pdf");
+        try {
+            desktop.open(file);
+
+        } catch (IOException ex) {
+
+        }
     }
 }
 
